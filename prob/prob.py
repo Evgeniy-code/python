@@ -6,4 +6,3 @@ for elem in range(len(row)):
     my_list.append(temp_list)
     temp_list = []
 print(s)
-print(row)
