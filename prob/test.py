@@ -1,5 +1,6 @@
 def pascal(raw):
-    for i in range(raw + 1):
+    my_list = []
+    for i in range(raw):
         temp_list = []
         for j in range(i + 1):
             if j == 0 or j == i:
@@ -7,9 +8,10 @@ def pascal(raw):
             else:
                 temp_list.append(my_list[i - 1][j - 1] + my_list[i - 1][j])
         my_list.append(temp_list)
-    return print(my_list[raw])
+    return my_list
 
 
 n = int(input())
-my_list = []
-pascal(n)
+my_pascal_list = pascal(n)
+for i in my_pascal_list:
+    print(*i)
